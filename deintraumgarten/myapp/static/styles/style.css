@@ -1,0 +1,143 @@
+/* Hintergrundbild für die gesamte Seite */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/static/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#sidebar {
+    max-width: 264px;
+    min-width: 264px;
+    height: 100vh; /* Sidebar auf die gesamte Höhe der Seite strecken */
+    transition: all 0.35s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparente Sidebar */
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Fixieren, damit sie beim Scrollen bleibt */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#sidebar.collapsed {
+    margin-left: -264px;
+}
+
+#sidebar.collapsed + .toggler-btn {
+    left: 0; /* Direkt rechts neben der eingeklappten Sidebar */
+}
+
+.toggler-btn {
+    position: fixed; /* Fixiert, um immer sichtbar zu bleiben */
+    left: 264px; /* Anfangs rechts von der geöffneten Sidebar */
+    top: 1rem; /* Abstand vom oberen Rand */
+    background-color: #000; /* Schwarzer Hintergrund */
+    color: #fff; /* Weiße Schriftfarbe */
+    border: none; /* Kein Rahmen */
+    padding: 0.75rem; /* Symmetrische Polsterung */
+    cursor: pointer; /* Zeiger-Cursor */
+    z-index: 1050; /* Über der Sidebar */
+    transition: left 0.35s ease-in-out; /* Bewegung synchron zur Sidebar */
+    font-size: 1.25rem; /* Größe des Symbols */
+    border-radius: 50%; /* Macht den Button rund */
+    width: 48px; /* Feste Breite für den Kreis */
+    height: 48px; /* Feste Höhe für den Kreis */
+    display: flex; /* Zentrieren von Icon im Kreis */
+    align-items: center; /* Vertikale Zentrierung */
+    justify-content: center; /* Horizontale Zentrierung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Schatten für visuelle Tiefe */
+}
+
+.toggler-btn i {
+    font-size: 1.75rem;
+    color: #FFF;
+    font-weight: 1000;
+}
+
+.sidebar-nav {
+    flex: 1 1 auto;
+    overflow-y: auto; /* Scrollen aktivieren, falls Inhalte zu lang sind */
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-logo {
+    padding: 1.15rem 1.5rem;
+    text-align: center;
+}
+
+.sidebar-logo a {
+    color: #FFF;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    position: relative;
+    transition: all 0.35s;
+    display: block;
+    font-size: 1.25rem;
+}
+
+a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+/* Responsive Anpassungen */
+@media (max-width:768px) {
+    .sidebar-toggle {
+        margin-left: -264px;
+    }
+
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+}
