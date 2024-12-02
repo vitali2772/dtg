@@ -1,4 +1,3 @@
-/* Hintergrundbild für die gesamte Seite */
 body {
     font-family: 'Poppins', sans-serif;
     background-image: url('/static/images/bg.jpg');
@@ -54,10 +53,11 @@ a {
     position: fixed; /* Fixiert, um immer sichtbar zu bleiben */
     left: 264px; /* Anfangs rechts von der geöffneten Sidebar */
     top: 1rem; /* Abstand vom oberen Rand */
-    background-color: #000; /* Schwarzer Hintergrund */
+    background-color: rgba(0, 0, 0, 0.8); /* Transparente Sidebar */
     color: #fff; /* Weiße Schriftfarbe */
     border: none; /* Kein Rahmen */
     padding: 0.75rem; /* Symmetrische Polsterung */
+    margin-left: 15px;
     cursor: pointer; /* Zeiger-Cursor */
     z-index: 1050; /* Über der Sidebar */
     transition: left 0.35s ease-in-out; /* Bewegung synchron zur Sidebar */
