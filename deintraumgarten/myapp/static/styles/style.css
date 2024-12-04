@@ -161,7 +161,7 @@ a.sidebar-link:hover {
 }
   
   /* Hover-Effekt für die Untermenüpunkte */
-  .sidebar-dropdown .sidebar-item .sidebar-link:hover {
+.sidebar-dropdown .sidebar-item .sidebar-link:hover {
     color: #fff; /* Hover-Farbe für bessere Sichtbarkeit */
     background-color: #333; /* Hintergrundfarbe bei Hover */
 }
@@ -182,17 +182,100 @@ a.sidebar-link:hover {
 
 /* Styling for the About Section */
 #about {
-    display: flex; /* Flexbox-Ausrichtung */
-    justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren */
-    height: 100vh; /* Volle Höhe des Bildschirms */
-    background-color: #6c757d; /* Hintergrundfarbe */
-    text-align: center; /* Text in der Mitte ausrichten */
+    background-color: #B4B4B4; /* Hellgrauer Hintergrund */
+    padding: 3rem 1.5rem; /* Außenabstand */
+    text-align: center; /* Zentrierung von Text */
 }
 
 #about h2 {
     font-size: 2.5rem; /* Schriftgröße anpassen */
     color: white; /* Textfarbe */
+}
+
+.about-description {
+    font-size: 1.2rem; /* Lesbare Schriftgröße */
+    line-height: 1.6; /* Angenehmer Zeilenabstand */
+    color: #555;
+    max-width: 800px; /* Breite begrenzen */
+    margin: 0 auto 2.5rem; /* Zentrieren und Abstand */
+}
+
+.section-title {
+    font-size: 2.5rem; /* Große Schrift für den Titel */
+    font-weight: bold;
+    margin-bottom: 1.5rem; /* Abstand nach unten */
+    color: #333;
+}
+
+/* Karten-Layout */
+.team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Abstand zwischen den Karten */
+    flex-wrap: wrap; /* Karten umbrechen bei kleinen Bildschirmen */
+    align-items: stretch; /* Alle Karten auf gleiche Höhe ausrichten */
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+    border-radius: 8px; /* Abgerundete Ecken */
+    overflow: hidden; /* Inhalt abschneiden */
+    max-width: 300px; /* Maximale Breite */
+    text-align: center; /* Zentrierter Text */
+    transition: transform 0.3s ease; /* Hover-Animation */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Den Inhalt nach oben ausrichten */
+    align-items: center;
+    height: 500px; /* Feste Höhe für eine gleichmäßige Kartenhöhe */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Heben beim Hover */
+}
+
+.card-img {
+    width: 120px; /* Feste Breite für das Bild */
+    height: 120px; /* Feste Höhe für das Bild */
+    margin-top: 1rem; /* Abstand oben */
+    margin-bottom: 1rem; /* Abstand nach unten */
+    border-radius: 50%; /* Rundes Bild */
+    overflow: hidden; /* Alles außerhalb des Kreises abschneiden */
+}
+
+.card-img img {
+    width: 100%; /* Bild auf volle Breite des Containers */
+    height: 100%; /* Bild auf volle Höhe des Containers */
+    object-fit: cover; /* Bild so skalieren, dass es den Kreis ausfüllt */
+}
+
+.card-content {
+    padding: 1.5rem; /* Innenabstand */
+    flex-grow: 1; /* Sorgt dafür, dass der Inhalt gleichmäßig verteilt wird */
+    text-align: left; /* Text linksbündig ausrichten */
+    width: 100%; /* Volle Breite */
+}
+
+.card-content h3 {
+    font-size: 1.5rem; /* Schriftgröße für Namen */
+    margin-bottom: 0.75rem; /* Abstand nach unten */
+    color: #333;
+}
+
+.card-content p {
+    font-size: 1rem; /* Textgröße für die Infos */
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 0.5rem; /* Abstand zwischen den Absätzen */
+}
+
+.card-content .position,
+.card-content .experience,
+.card-content .email,
+.card-content .phone {
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 /* Optional: Smooth Scroll */
