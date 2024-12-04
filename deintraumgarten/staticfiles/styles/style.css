@@ -53,10 +53,11 @@ a {
     position: fixed; /* Fixiert, um immer sichtbar zu bleiben */
     left: 264px; /* Anfangs rechts von der geöffneten Sidebar */
     top: 1rem; /* Abstand vom oberen Rand */
-    background-color: #000; /* Schwarzer Hintergrund */
+    background-color: rgba(0, 0, 0, 0.8); /* Transparente Sidebar */
     color: #fff; /* Weiße Schriftfarbe */
     border: none; /* Kein Rahmen */
     padding: 0.75rem; /* Symmetrische Polsterung */
+    margin-left: 15px;
     cursor: pointer; /* Zeiger-Cursor */
     z-index: 1050; /* Über der Sidebar */
     transition: left 0.35s ease-in-out; /* Bewegung synchron zur Sidebar */
@@ -74,7 +75,6 @@ a {
     font-size: 1.75rem;
     color: #FFF;
     font-weight: 1000;
-    background-color: rgba(0, 0, 0, 0.8); /* Transparente Sidebar */
 }
 
 .sidebar-nav {
@@ -140,4 +140,21 @@ a.sidebar-link:hover {
     #sidebar.collapsed {
         margin-left: 0;
     }
+}
+
+.sidebar-item .sidebar-link {
+    font-size: 16px;
+}
+
+/* Untermenüpunkte (Impressum, Datenschutz, Cookies) kleiner und eingerückt */
+.sidebar-dropdown .sidebar-item .sidebar-link {
+    font-size: 14px; /* Kleinere Schrift für Untermenüpunkte */
+    padding-left: 20px; /* Einrücken der Untermenüpunkte */
+    color: #aaa; /* Farbe für weniger auffällige Untermenüpunkte */
+}
+  
+  /* Hover-Effekt für die Untermenüpunkte */
+  .sidebar-dropdown .sidebar-item .sidebar-link:hover {
+    color: #fff; /* Hover-Farbe für bessere Sichtbarkeit */
+    background-color: #333; /* Hintergrundfarbe bei Hover */
 }

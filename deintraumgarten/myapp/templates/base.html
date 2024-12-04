@@ -28,13 +28,13 @@
           <!-- Sidebar Navigation -->
           <ul class="sidebar-nav p-0">
               <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">
+                  <a href="#home" class="sidebar-link">
                     <i class="material-symbols-outlined">home</i>
                     <span>Startseite</span>
                   </a>
               </li>
               <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">
+                  <a href="#about" class="sidebar-link">
                     <i class="material-symbols-outlined">group</i>
                     <span>Über uns</span>
                   </a>
@@ -108,6 +108,22 @@
           <i class="material-symbols-outlined">menu</i>
       </button>
 
+      <div class="main-content flex-grow-1">
+        <!-- Home Section -->
+        <section id="home">
+            
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+          <div class="d-flex flex-column justify-content-center align-items-center h-100">
+              <h2>Über uns</h2>
+          </div>
+      </section>
+      
+    </div>
+      
+
     </div>
   
   
@@ -121,6 +137,44 @@
       toggler.addEventListener("click", function () {
       sidebar.classList.toggle("collapsed");
       });
+
+      document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            const startPosition = window.scrollY;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            const distance = targetPosition - startPosition;
+            const duration = 850; // Kürzer (600ms statt 1000ms)
+            let startTime = null;
+
+            function scrollAnimation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+
+                window.scrollTo(0, run);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(scrollAnimation);
+                }
+            }
+
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(scrollAnimation);
+        }
+    });
+});
+
     </script>
   </body>
 </html>

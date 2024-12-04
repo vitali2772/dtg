@@ -1,12 +1,10 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('/static/images/bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden; /* Nur horizontales Scrollen verhindern */
 }
 
 h1 {
@@ -140,4 +138,73 @@ a.sidebar-link:hover {
     #sidebar.collapsed {
         margin-left: 0;
     }
+}
+
+.sidebar-item .sidebar-link {
+    display: flex;
+    align-items: center; /* Vertikale Ausrichtung der Inhalte */
+    font-size: 16px; /* Schriftgröße der Sidebar-Links */
+    padding: 10px 15px; /* Innenabstand für mehr Platz */
+}
+
+.sidebar-item .sidebar-link i {
+    font-size: 24px; /* Schriftgröße der Icons */
+    margin-right: 10px; /* Abstand zwischen Icon und Text */
+    line-height: 1; /* Vertikale Ausrichtung verbessern */
+}
+
+/* Untermenüpunkte (Impressum, Datenschutz, Cookies) kleiner und eingerückt */
+.sidebar-dropdown .sidebar-item .sidebar-link {
+    font-size: 14px; /* Kleinere Schrift für Untermenüpunkte */
+    padding-left: 20px; /* Einrücken der Untermenüpunkte */
+    color: #aaa; /* Farbe für weniger auffällige Untermenüpunkte */
+}
+  
+  /* Hover-Effekt für die Untermenüpunkte */
+  .sidebar-dropdown .sidebar-item .sidebar-link:hover {
+    color: #fff; /* Hover-Farbe für bessere Sichtbarkeit */
+    background-color: #333; /* Hintergrundfarbe bei Hover */
+}
+
+/* Home Section with Background Image */
+#home {
+    background-image: url('/static/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Home Section füllt den Bildschirm */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling for the About Section */
+#about {
+    display: flex; /* Flexbox-Ausrichtung */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    height: 100vh; /* Volle Höhe des Bildschirms */
+    background-color: #6c757d; /* Hintergrundfarbe */
+    text-align: center; /* Text in der Mitte ausrichten */
+}
+
+#about h2 {
+    font-size: 2.5rem; /* Schriftgröße anpassen */
+    color: white; /* Textfarbe */
+}
+
+/* Optional: Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: auto; /* Automatische Höhe, basierend auf dem Inhalt */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Horizontales Scrollen verhindern */
+    font-family: 'Poppins', sans-serif; /* Schriftart festlegen */
+    scroll-behavior: smooth; /* Sanftes Scrollen */
 }
