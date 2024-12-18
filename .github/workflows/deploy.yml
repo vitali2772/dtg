@@ -28,7 +28,7 @@ jobs:
       # 3. Collect static files (Django spezifisch)
       - name: Collect static files
         run: |
-          python manage.py collectstatic --noinput
+          python deintraumgarten/manage.py collectstatic --noinput
 
       # 4. Deploy statische Dateien zu GitHub Pages
       - name: Deploy to GitHub Pages
