@@ -34,5 +34,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Hier wird der GitHub Token verwendet
+          github_token: ${{ secrets.GH_TOKEN }}  # Hier wird der GitHub Token verwendet
           publish_dir: ./static  # Der Ordner, in dem collectstatic Dateien abgelegt werden
