@@ -3,7 +3,7 @@ from .models import TodoItem
 
 # Create your views here.
 def home(request):
-    return render(request, "base.html")
+    return render(request, "index.html")
 
 # Model Beispiel
 def todos(request):
