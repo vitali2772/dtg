@@ -34,7 +34,7 @@ jobs:
         run: |
           python manage.py collectstatic --noinput
 
-      - name: Copy index.html to Root
+      - name: Copy Rendered HTML and Static Files
         run: |
           mkdir -p public
           cp deintraumgarten/myapp/templates/index.html public/index.html
@@ -44,16 +44,6 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: public/
-          
-      - name: Copy Rendered HTML to Root
-        run: |
-          mkdir -p public
-          if [ ! -f public/index.html ]; then
-            cp deintraumgarten/myapp/templates/index.html public/index.html
-          fi
-          cp -r deintraumgarten/staticfiles/* public/
-  
-  
 
   deploy:
     runs-on: ubuntu-latest
