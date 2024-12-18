@@ -34,10 +34,16 @@ jobs:
         run: |
           python manage.py collectstatic --noinput
 
+      - name: Copy index.html to Root
+        run: |
+          mkdir -p public
+          cp deintraumgarten/myapp/templates/index.html public/index.html
+          cp -r deintraumgarten/staticfiles/* public/
+
       - name: Upload Static Files
         uses: actions/upload-pages-artifact@v2
         with:
-          path: deintraumgarten/staticfiles/
+          path: public/
 
   deploy:
     runs-on: ubuntu-latest
