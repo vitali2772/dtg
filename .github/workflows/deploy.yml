@@ -47,8 +47,12 @@ jobs:
           
       - name: Copy Rendered HTML to Root
         run: |
-          cp public/index.html public/
+          mkdir -p public
+          if [ ! -f public/index.html ]; then
+            cp deintraumgarten/myapp/templates/index.html public/index.html
+          fi
           cp -r deintraumgarten/staticfiles/* public/
+  
   
 
   deploy:
