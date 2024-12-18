@@ -24,18 +24,20 @@ jobs:
           python-version: '3.x'
 
       - name: Install Dependencies
+        working-directory: deintraumgarten
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r ../requirements.txt
 
       - name: Collect Static Files
+        working-directory: deintraumgarten
         run: |
           python manage.py collectstatic --noinput
 
       - name: Upload Static Files
         uses: actions/upload-pages-artifact@v2
         with:
-          path: static/
+          path: deintraumgarten/staticfiles/
 
   deploy:
     runs-on: ubuntu-latest
