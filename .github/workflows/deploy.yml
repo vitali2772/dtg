@@ -37,7 +37,9 @@ jobs:
       - name: Prepare Static Files and HTML
         run: |
           mkdir -p public
-          cp deintraumgarten/myapp/templates/index.html public/index.html
+          if [ ! -f public/index.html ]; then
+            cp deintraumgarten/myapp/templates/index.html public/index.html
+          fi
           cp -r deintraumgarten/staticfiles/* public/
 
       - name: Upload Static Files
