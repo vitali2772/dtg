@@ -34,7 +34,7 @@ jobs:
         run: |
           python manage.py collectstatic --noinput
 
-      - name: Copy Rendered HTML and Static Files
+      - name: Prepare Static Files and HTML
         run: |
           mkdir -p public
           cp deintraumgarten/myapp/templates/index.html public/index.html
