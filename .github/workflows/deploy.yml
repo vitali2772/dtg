@@ -46,6 +46,10 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: public/
+          
+      - name: Copy Rendered HTML to Root
+        run: |
+          cp -r deintraumgarten/staticfiles/* public/
 
   deploy:
     runs-on: ubuntu-latest
