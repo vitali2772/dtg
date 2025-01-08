@@ -232,37 +232,31 @@ a.sidebar-link:hover {
 .team-cards {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Abstand zwischen den Karten */
-    flex-wrap: wrap; /* Karten umbrechen bei kleinen Bildschirmen */
-    align-items: stretch; /* Alle Karten auf gleiche Höhe ausrichten */
+    gap: 2rem;
+    align-items: stretch; /* Karten auf gleiche Höhe bringen */
 }
 
 /* Karte */
 .card {
     background-color: #000000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
-    border-radius: 8px; /* Abgerundete Ecken */
     overflow: hidden; /* Inhalt abschneiden */
     max-width: 300px; /* Maximale Breite */
     text-align: center; /* Zentrierter Text */
-    transition: transform 0.3s ease; /* Hover-Animation */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Den Inhalt nach oben ausrichten */
+    justify-content: space-between; /* Inhalte gleichmäßig verteilen */
     align-items: center;
-    height: 500px; /* Feste Höhe für eine gleichmäßige Kartenhöhe */
+    height: 100%; /* Karte füllt den verfügbaren Platz */
+    padding: 1rem; /* Optional: Einheitliche Polsterung */
+    box-sizing: border-box; /* Polsterung in die Gesamthöhe einrechnen */
 }
-
-
-/* .card:hover {
-    transform: translateY(-10px); /* Heben beim Hover */
-/*}
 
 /* Bild */
 .card-img {
     width: 120px; /* Feste Breite für das Bild */
     height: 120px; /* Feste Höhe für das Bild */
     margin-top: 1rem; /* Abstand oben */
+    margin-bottom: 0.5rem; /* Kleineren Abstand nach unten */
     border-radius: 50%; /* Rundes Bild */
     overflow: hidden; /* Alles außerhalb des Kreises abschneiden */
 }
@@ -276,37 +270,49 @@ a.sidebar-link:hover {
 
 /* Karteninhalt */
 .card-content {
-    padding: 1.5rem; /* Innenabstand */
-    flex-grow: 1; /* Sorgt dafür, dass der Inhalt gleichmäßig verteilt wird */
-    text-align: center; /* Text zentrieren */
-    width: 100%; /* Volle Breite */
+    padding: 0.5rem; /* Verringere den Innenabstand */
+    margin: 0; /* Entferne äußeren Abstand */
+    flex-grow: 1; /* Optional: Beibehaltung der Flexibilität */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Inhalte nach oben ausrichten */
+    align-items: center;
 }
+
 
 /* Name unter dem Bild */
 .card-content h3 {
     font-size: 1.5rem; /* Schriftgröße für Namen */
+    margin-top: 0.5rem; /* Optional: Kleinerer Abstand nach oben */
     margin-bottom: 0.3rem; /* Abstand nach unten */
     color: #C8AB3C; /* Standard Textfarbe */
     font-weight: bold;
+    line-height: 1.2; /* Einheitliche Zeilenhöhe */
 }
 
-/* Weitere Textabschnitte */
-.card-content p {
-    font-size: 1rem; /* Textgröße für die Infos */
-    color: #666;
-    line-height: 1.4;
-    margin-bottom: 0.5rem; /* Abstand zwischen den Absätzen */
+.card-content .position {
+    color: #666; /* Grau für Geschäftsführender Gesellschafter */
+    font-size: 1rem; /* Schriftgröße */
+    margin-bottom: 0.1rem; /* Abstand nach unten */
 }
 
-/* Position und andere Informationen */
-.card-content .position,
+
+/* Weitere Infos (weiß) */
 .card-content .experience,
 .card-content .email,
 .card-content .phone {
-    font-weight: 500;
-    margin-bottom: 10px;
+    color: #FFF; /* Weiße Schrift */
+    font-size: 1rem; /* Einheitliche Schriftgröße */
+    margin-bottom: 0.5rem; /* Abstand zwischen den Absätzen */
 }
 
+.card-content p,
+.card-content .info span {
+    line-height: 1.5; /* Einheitliche Zeilenhöhe */
+    margin: 0; /* Entferne zusätzliche Margins */
+}
 
 /* Optional: Smooth Scroll */
 html {
@@ -322,37 +328,19 @@ html, body {
     scroll-behavior: smooth; /* Sanftes Scrollen */
 }
 
-/* Info-Container mit Flexbox */
+/* Info-Container für Flexbox */
 .info {
     display: flex;
     align-items: center;  /* Vertikale Ausrichtung der Inhalte */
     margin-bottom: 10px;   /* Abstand zwischen den Info-Reihen */
+    justify-content: center; /* Horizontale Zentrierung */
 }
 
 /* Material Icons (Links neben Text) */
 .info i {
     font-size: 1.5rem;  /* Größe des Icons */
     margin-right: 10px;  /* Abstand zwischen dem Icon und dem Text */
-    line-height: 0;  /* Verhindert zusätzliche Höhenabstände */
-    display: inline-flex;  /* Verhindert Block-Level-Verhalten */
-    align-items: center;  /* Sorgt dafür, dass das Icon vertikal zentriert ist */
-    justify-content: center; /* Sichert die Ausrichtung in der Mitte */
-}
-
-/* Textspan-Elemente */
-.info span, 
-.info p {
-    margin: 0;  /* Entfernt die Standard-Margins */
-    font-size: 1rem;  /* Textgröße */
-    color: #666;  /* Textfarbe */
-    display: inline-flex; /* Verhindert, dass der Text auf einer neuen Zeile beginnt */
-    align-items: center;  /* Vertikale Ausrichtung */
-}
-
-/* Falls du spezifische Klassen verwendest, wie z.B. .position, .experience, .email, .phone */
-.position, .experience, .email, .phone {
-    display: inline-flex;
-    align-items: center;  /* Vertikale Ausrichtung */
+    color: #FFF; /* Weiße Icons */
 }
 
 #service {
