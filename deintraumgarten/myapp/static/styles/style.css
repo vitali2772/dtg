@@ -90,7 +90,7 @@ a {
 .sidebar-logo a {
     color: #FFF;
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 a.sidebar-link {
@@ -190,13 +190,13 @@ a.sidebar-link:hover {
 
 #about h2 {
     font-size: 2.5rem; /* Schriftgröße anpassen */
-    color: white; /* Textfarbe */
+    color: #C8AB3C; /* Textfarbe */
 }
 
 .about-description {
     font-size: 1.2rem; /* Lesbare Schriftgröße */
     line-height: 1.6; /* Angenehmer Zeilenabstand */
-    color: #555;
+    color: #ffffff;
     max-width: 800px; /* Breite begrenzen */
     margin: 0 auto 2.5rem; /* Zentrieren und Abstand */
 }
@@ -219,7 +219,7 @@ a.sidebar-link:hover {
 
 /* Karte */
 .card {
-    background-color: #fff;
+    background-color: #000000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
     border-radius: 8px; /* Abgerundete Ecken */
     overflow: hidden; /* Inhalt abschneiden */
@@ -233,9 +233,10 @@ a.sidebar-link:hover {
     height: 500px; /* Feste Höhe für eine gleichmäßige Kartenhöhe */
 }
 
-.card:hover {
+
+/* .card:hover {
     transform: translateY(-10px); /* Heben beim Hover */
-}
+/*}
 
 /* Bild */
 .card-img {
@@ -266,7 +267,7 @@ a.sidebar-link:hover {
 .card-content h3 {
     font-size: 1.5rem; /* Schriftgröße für Namen */
     margin-bottom: 0.75rem; /* Abstand nach unten */
-    color: #333; /* Standard Textfarbe */
+    color: #C8AB3C; /* Standard Textfarbe */
 }
 
 /* Weitere Textabschnitte */
@@ -331,4 +332,16 @@ html, body {
 .position, .experience, .email, .phone {
     display: inline-flex;
     align-items: center;  /* Vertikale Ausrichtung */
+}
+
+#service {
+    background-color: #000; /* Hellgrauer Hintergrund */
+    padding: 3rem 1.5rem; /* Außenabstand */
+    text-align: center; /* Zentrierung von Text */
+    color: #fff; /* Weiße Textfarbe */
+}
+
+#service h2{
+    font-size: 2.5rem; /* Schriftgröße anpassen */
+    color: #C8AB3C;
 }
