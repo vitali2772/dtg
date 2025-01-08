@@ -353,3 +353,47 @@ html, body {
 #service h2 {
     color: #C8AB3C; /* Textfarbe */
 }
+
+/* Service Cards Container */
+.service-cards {
+    display: grid; /* Aktiviere Grid-Layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 Spalten mit gleicher Breite */
+    gap: 1.5rem; /* Abstand zwischen den Karten */
+    margin: 0 auto; /* Zentrierung des Containers */
+    padding: 0 2rem; /* Zusätzlicher Abstand links und rechts vom Bildschirmrand */
+}
+
+/* Einzelne Karte */
+.card-s {
+    background-color: #000; /* Schwarzer Hintergrund */
+    color: #fff; /* Weißer Text */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    overflow: hidden; /* Inhalt abschneiden */
+    text-align: center; /* Zentrierung */
+    padding: 0.8rem; /* Innenabstand */
+    width: 90%; /* Verkleinert die Karte, sorgt für mehr Platz links und rechts */
+    margin: 0 auto; /* Zentriert jede Karte */
+}
+
+/* Bild der Karte */
+.card-s-img {
+    width: 100%; /* Volle Breite innerhalb der Karte */
+    height: 130px; /* Etwas kleinere Höhe */
+    margin-bottom: 1rem; /* Abstand zum Text */
+    overflow: hidden; /* Inhalt beschneiden */
+    border-radius: 8px; /* Abgerundete Ecken für das Bild */
+}
+
+.card-s-img img {
+    width: 100%; /* Bild an die Breite anpassen */
+    height: 100%; /* Bild an die Höhe anpassen */
+    object-fit: cover; /* Bild skalieren, ohne das Seitenverhältnis zu verlieren */
+}
+
+/* Textinhalt der Karte */
+.card-s-content span {
+    font-size: 1rem; /* Kleinere Schriftgröße */
+    font-weight: bold;
+    color: #C8AB3C; /* Goldene Farbe für den Text */
+}
