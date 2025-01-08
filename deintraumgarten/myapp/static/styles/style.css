@@ -397,3 +397,57 @@ html, body {
     font-weight: bold;
     color: #C8AB3C; /* Goldene Farbe für den Text */
 }
+
+/* Footer */
+.footer {
+    background-color: #1A191A; /* Schwarzer Hintergrund */
+    color: #fff; /* Weiße Schriftfarbe */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem; /* Abstand innerhalb des Footers */
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem; /* Abstand zwischen den Links */
+    margin-bottom: 1rem; /* Abstand zwischen Links und Icons */
+}
+
+.footer-link {
+    color: #fff; /* Weiße Schriftfarbe */
+    font-size: 1rem; /* Schriftgröße */
+    text-decoration: none; /* Unterstreichung entfernen */
+    transition: color 0.3s ease; /* Sanfter Hover-Effekt */
+}
+
+.footer-link:hover {
+    color: #C8AB3C; /* Goldene Farbe beim Hover */
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1rem; /* Abstand zwischen den Social-Media-Icons */
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Größe des Icons */
+    height: 40px; /* Größe des Icons */
+    border-radius: 50%; /* Runde Icons */
+    background-color: rgba(255, 255, 255, 0.1); /* Leichter Hintergrund */
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: rgba(200, 171, 60, 0.2); /* Goldener Hintergrund beim Hover */
+}
+
+.social-icon {
+    width: 24px; /* Breite des Icons */
+    height: 24px; /* Höhe des Icons */
+}
