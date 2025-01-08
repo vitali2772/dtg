@@ -398,6 +398,74 @@ html, body {
     color: #C8AB3C; /* Goldene Farbe für den Text */
 }
 
+/* Contact Section */
+.contact-section {
+    background-color: #000; /* Schwarzer Hintergrund */
+    color: #fff; /* Weißer Text */
+    padding: 3rem 1.5rem; /* Abstand innerhalb der Section */
+    text-align: center; /* Zentriere den Text */
+}
+
+.contact-section .section-title {
+    font-size: 2rem; /* Schriftgröße für die Überschrift */
+    color: #C8AB3C; /* Goldene Farbe */
+    margin-bottom: 2rem; /* Abstand unter der Überschrift */
+}
+
+.contact-form {
+    max-width: 600px; /* Breite des Formulars begrenzen */
+    margin: 0 auto; /* Formular zentrieren */
+    display: flex;
+    flex-direction: column; /* Inhalte untereinander anordnen */
+    gap: 1.5rem; /* Abstand zwischen den Formularfeldern */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Label und Input vertikal anordnen */
+    text-align: left; /* Text linksbündig ausrichten */
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem; /* Abstand zwischen Label und Input */
+    color: #fff; /* Weißer Text */
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem; /* Polsterung innerhalb der Felder */
+    font-size: 1rem; /* Schriftgröße */
+    border: 1px solid #C8AB3C; /* Goldener Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    background-color: #222; /* Dunkler Hintergrund */
+    color: #fff; /* Weißer Text */
+    outline: none; /* Standard-Fokusrahmen entfernen */
+    width: 100%; /* Volle Breite */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa; /* Hellgraue Platzhalterfarbe */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #C8AB3C; /* Goldener Rahmen bei Fokus */
+}
+
+.btn-submit {
+    padding: 0.75rem 1.5rem; /* Polsterung für den Button */
+    font-size: 1rem; /* Schriftgröße */
+    font-weight: bold;
+    color: #fff; /* Weißer Text */
+    background-color: #C8AB3C; /* Goldene Hintergrundfarbe */
+    border: none; /* Kein Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    cursor: pointer; /* Zeiger-Cursor */
+    transition: backgrou
+}
+
 /* Footer */
 .footer {
     background-color: #1A191A; /* Schwarzer Hintergrund */
