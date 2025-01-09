@@ -480,6 +480,26 @@ html, body {
     transition: backgrou
 }
 
+.alert {
+    position: fixed; /* Fixiert die Meldung */
+    top: 20px; /* Abstand vom oberen Rand */
+    left: 50%; /* Zentriert horizontal */
+    transform: translateX(-50%); /* Zentrierung */
+    background-color: #28a745; /* Grün für Erfolgsmeldung */
+    color: white; /* Weißer Text */
+    padding: 1rem 1.5rem; /* Innenabstand */
+    border-radius: 5px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    z-index: 1050; /* Höchste Ebene */
+    font-size: 1rem; /* Lesbare Schriftgröße */
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Sanftes Ausblenden */
+}
+
+.alert-success {
+    background-color: #28a745;
+}
+
 /* Footer */
 .footer {
     background-color: #1A191A; /* Schwarzer Hintergrund */
