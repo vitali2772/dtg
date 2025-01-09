@@ -170,7 +170,7 @@ a.sidebar-link:hover {
 #home {
     position: relative; /* Wichtig für die Platzierung von Pseudo-Elementen */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)), 
-                      url('/static/images/bg.jpg'); /* Verlauf + Bild */
+                      url('/static/images/bg2.jpg'); /* Verlauf + Bild */
     background-size: cover; /* Bildgröße anpassen */
     background-position: center; /* Bildzentrierung */
     background-repeat: no-repeat; /* Verhindert Wiederholung */
