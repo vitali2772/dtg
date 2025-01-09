@@ -186,7 +186,7 @@ a.sidebar-link:hover {
 .logo {
     position: absolute; /* Positionierung relativ zum Bildschirm */
     top: 30px; /* Abstand von oben */
-    right: 30px; /* Abstand von rechts */
+    right: 5%; /* Abstand von rechts */
     width: 160px; /* Breite des Logos */
     height: 160px; /* Höhe des Logos */
     z-index: 1050; /* Sicherstellen, dass es über anderen Elementen liegt */
@@ -198,6 +198,20 @@ a.sidebar-link:hover {
     object-fit: cover; /* Bild korrekt skalieren */
     border-radius: 25%;
 }
+
+/* Home Caption */
+.home-caption {
+    position: absolute; /* Ermöglicht die Platzierung relativ zum Eltern-Container */
+    bottom: 25%; /* Abstand vom unteren Rand */
+    right: 5%; /* Abstand vom rechten Rand */
+    font-size: 1.5rem; /* Schriftgröße */
+    font-weight: bold; /* Fettdruck */
+    color: white; /* Goldene Farbe */
+    background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter Hintergrund */
+    padding: 0.5rem 1rem; /* Innenabstand für besseren Kontrast */
+    border-radius: 15px; /* Abgerundete Ecken */
+}
+
 
 
 /* Styling for the About Section */
@@ -519,3 +533,4 @@ html, body {
     width: 24px; /* Breite des Icons */
     height: 24px; /* Höhe des Icons */
 }
+
