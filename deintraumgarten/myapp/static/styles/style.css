@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -185,7 +185,7 @@ a.sidebar-link:hover {
 
 .logo {
     position: absolute; /* Positionierung relativ zum Bildschirm */
-    top: 30px; /* Abstand von oben */
+    top: 5%; /* Abstand von oben */
     right: 5%; /* Abstand von rechts */
     width: 160px; /* Breite des Logos */
     height: 160px; /* Höhe des Logos */
@@ -338,7 +338,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Horizontales Scrollen verhindern */
-    font-family: 'Poppins', sans-serif; /* Schriftart festlegen */
+    font-family: 'Nunito Sans', sans-serif; /* Schriftart festlegen */
     scroll-behavior: smooth; /* Sanftes Scrollen */
 }
 
