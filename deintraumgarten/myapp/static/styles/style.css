@@ -377,6 +377,51 @@ html, body {
     padding: 0 2rem; /* Zusätzlicher Abstand links und rechts vom Bildschirmrand */
 }
 
+/* Partner Section */
+/* Partner Section */
+.partner-section {
+    position: relative;
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1)), 
+        url('/static/images/partner-bg.jpg'); /* Verlauf oben + Bild + Verlauf unten */
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 10rem; /* Abstand oben und unten */
+    color: white; /* Textfarbe */
+    text-align: center;
+}
+
+
+.partner-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dunkler Overlay-Effekt */
+    padding: 4rem 0; /* Innenabstand */
+    width: 100%;
+    height: 100%;
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap; /* Logos umbrechen, wenn der Platz nicht ausreicht */
+    justify-content: center; /* Zentriere Logos */
+    gap: 2rem; /* Abstand zwischen den Logos */
+    margin-top: 2rem; /* Abstand nach dem Titel */
+}
+
+.partner-logos img {
+    width: 250px; /* Größe der Logos */
+    height: 100px; /* Automatische Höhe entsprechend der Breite */
+    filter: brightness(0.9); /* Helligkeit etwas reduzieren */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animationseffekt bei Hover */
+}
+
+.partner-logos img:hover {
+    transform: scale(1.1); /* Vergrößert das Logo bei Hover */
+    filter: brightness(1); /* Setzt die Helligkeit zurück */
+}
+
+.section-title {
+    color: white;
+}
 /* Einzelne Karte */
 .card-s {
     background-color: #000; /* Schwarzer Hintergrund */
