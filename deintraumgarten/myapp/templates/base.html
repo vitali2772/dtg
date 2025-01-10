@@ -24,7 +24,7 @@
             <!-- Titel & Logo der Sidebar -->
             <aside id="sidebar" class="sidebar-toggle collapsed">
                 <div class="sidebar-logo">
-                    <a href="#">deinlandschaftsbauer</a>
+                    <a href="#">deinlandschaftsbauer.de</a>
                 </div>
 
                 <!-- Sidebar Navigation -->
@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="#partners" class="sidebar-link">
                             <i class="material-symbols-outlined">handshake</i>
                             <span>Partner</span>
                         </a>
@@ -100,17 +100,20 @@
                 </div>
             </aside>
 
+            <div class="logo">
+                <img src="static/images/logo.png" alt="logo">
+            </div>
             <!-- Toggle Button -->
             <button class="toggler-btn" type="button">
                 <i class="material-symbols-outlined">menu</i>
             </button>
+            <div class="center-caption">
+                deinlandschaftsbauer.de
+            </div>
 
             <div class="main-content flex-grow-1">
                 <!-- Home Section -->
                 <section id="home">
-                    <div class="logo">
-                        <img src="static/images/logo.png" alt="logo">
-                    </div>
                     <div class="home-caption">
                         Ihr Partner in Sachen Gartengestaltung
                     </div>
@@ -126,7 +129,8 @@
                         <p class="about-description">
                             DeinLandschaftsbauer ist ein vielseitiges Team, das sich mit Leidenschaft und Fachkompetenz um Ihre Projekte kümmert. Von Planungsarbeiten über Erdbewegungen und Abriss bis hin zu Pflasterarbeiten und Betonbohren – wir setzen Ihre Vision präzise und zuverlässig um. Ihr Projekt ist bei uns in den besten Händen.
                         </p>
-
+                        
+                        <hr>
                         <!-- Karten -->
                         <div class="team-cards">
                             <!-- Karte 1 -->
@@ -171,6 +175,17 @@
                                 </div>
                             </div>
                         </div>
+                        <hr>
+                        <br/>
+                        <p class="about-description">
+                            Wir, Max und Nico, sind ein erfahrenes Team mit insgesamt 20 Jahren Berufserfahrung in verschiedenen Gewerken. Trotz unseres jungen Alters zeichnen wir uns durch fundiertes Fachwissen und eine hohe Professionalität aus. Unser Handeln ist stets von dem Bestreben nach nachhaltigen und qualitativ hochwertigen Lösungen geprägt. Mit Leidenschaft und Hingabe widmen wir uns unseren Projekten und setzen alles daran, die Erwartungen unserer Kunden zu übertreffen.<br/><br/>
+
+                            Nachhaltigkeit ist für uns nicht nur ein Trend, sondern eine tief empfundene Verantwortung gegenüber kommenden Generationen. Wir haben es uns zum Ziel gesetzt, nachhaltige und zukunftsfähige Projekte zu realisieren, die Umweltbewusstsein und Ressourcenschonung mit in Betracht ziehen.<br/><br/>
+
+                            Wir sind uns bewusst, dass niemand alles können kann. Daher haben wir ein starkes Netzwerk von kompetenten Partnern, die uns mit ihrem Fachwissen und ihrer Expertise unterstützen. Gemeinsam bieten wir unseren Kunden umfassende und maßgeschneiderte Lösungen, die höchsten Ansprüchen gerecht werden.<br/><br/>
+
+                            Wir freuen uns darauf, auch Ihre Projekte mit unserer Erfahrung und unserem Engagement zu begleiten und erfolgreich umzusetzen.
+                        </p>
                     </div>
                 </section>
 
@@ -191,7 +206,7 @@
                             <!-- Karte 2 -->
                             <div class="card-s">
                                 <div class="card-s-img">
-                                    <img src="static/images/card2.jpg" alt="Erdbewegungen" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 27%;">
+                                    <img src="static/images/card2.jpg" alt="Erdbewegungen" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 80%;">
                                 </div>
                                 <div class="card-s-content">
                                     <span>Erdbewegungen</span>
@@ -217,7 +232,7 @@
                             </div>
                             <div class="card-s">
                                 <div class="card-s-img">
-                                    <img src="static/images/card5.jpg" alt="Zaunbau">
+                                    <img src="static/images/card5.jpg" alt="Zaunbau" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 10%;">
                                 </div>
                                 <div class="card-s-content">
                                     <span>Zaunbau</span>
@@ -225,7 +240,7 @@
                             </div>
                             <div class="card-s">
                                 <div class="card-s-img">
-                                    <img src="static/images/card6.jpg" alt="Betonbohren und -sägen">
+                                    <img src="static/images/card6.jpg" alt="Betonbohren und -sägen" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 60%;">
                                 </div>
                                 <div class="card-s-content">
                                     <span>Betonbohren und -sägen</span>
@@ -233,7 +248,7 @@
                             </div>
                             <div class="card-s">
                                 <div class="card-s-img">
-                                    <img src="static/images/card7.jpg" alt="Grünpflege">
+                                    <img src="static/images/card7.jpg" alt="Grünpflege" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 70%;">
                                 </div>
                                 <div class="card-s-content">
                                     <span>Grünpflege</span>
@@ -265,8 +280,8 @@
                         <h2 class="section-title text-center">Unsere Partner</h2>
                         <div class="container">
                             <div class="partner-logos">
-                                <a href="https://www.eds-service.de"><img src="{% static 'images/partner1.png' %}" alt="Partner 1"></a>
-                                <img src="{% static 'images/partner4.png' %}" alt="Partner 4">
+                                <a href="https://www.eds-service.de" target="_blank"><img src="{% static 'images/partner1.png' %}" alt="www.eds-service.de"></a>
+                                <img src="{% static 'images/partner4.png' %}" alt="Partner 2">
                             </div>
                         </div>
                     </div>

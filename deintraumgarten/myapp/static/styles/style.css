@@ -19,6 +19,15 @@ a {
     text-decoration: none;
 }
 
+hr {
+    border: none; /* Entfernt die Standard-Rahmen */
+    border-top: 1px solid #ddd; /* Schmale Linie */
+    margin: 1rem auto; /* Anpassung der Abstände */
+    width: 80%; /* Optional: Breite der Linie anpassen */
+    border-width: 3px;
+}
+
+
 .main {
     min-height: 100vh;
     width: 100%;
@@ -43,19 +52,31 @@ a {
     margin-left: -264px;
 }
 
-#sidebar.collapsed + .toggler-btn {
-    left: 0; /* Direkt rechts neben der eingeklappten Sidebar */
+#sidebar.collapsed ~ .toggler-btn {
+    left: 40px; /* Wenn die Sidebar eingeklappt ist */
+}
+
+#sidebar ~ .toggler-btn{
+    left: 304px;
+}
+
+#sidebar.collapsed ~ .logo {
+    left: 10px; /* Wenn die Sidebar eingeklappt ist */
+}
+
+#sidebar ~ .logo {
+    left: 274px; /* Wenn die Sidebar ausgeklappt ist */
 }
 
 .toggler-btn {
-    position: fixed; /* Fixiert, um immer sichtbar zu bleiben */
-    left: 264px; /* Anfangs rechts von der geöffneten Sidebar */
-    top: 1rem; /* Abstand vom oberen Rand */
-    background-color: rgba(20, 20, 20, 0.8); /* Transparente Sidebar */
+    position: fixed; /* Fixiert den Button beim Scrollen */
+    left: 20px; /* Anfangs rechts von der geöffneten Sidebar */
+    top: 140px; /* Direkt unter dem Logo */
+    background-color: rgba(20, 20, 20, 0.8); /* Transparenter Hintergrund */
     color: #fff; /* Weiße Schriftfarbe */
     border: none; /* Kein Rahmen */
     padding: 0.75rem; /* Symmetrische Polsterung */
-    margin-left: 15px;
+    margin-left: 0; /* Entfernt zusätzliches Padding */
     cursor: pointer; /* Zeiger-Cursor */
     z-index: 1050; /* Über der Sidebar */
     transition: left 0.35s ease-in-out; /* Bewegung synchron zur Sidebar */
@@ -67,6 +88,7 @@ a {
     align-items: center; /* Vertikale Zentrierung */
     justify-content: center; /* Horizontale Zentrierung */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Schatten für visuelle Tiefe */
+    transition: left 0.35s ease-in-out; /* Gleiche Bewegung wie der Toggle-Button */
 }
 
 .toggler-btn i {
@@ -88,7 +110,7 @@ a {
 }
 
 .sidebar-logo a {
-    color: #FFF;
+    color: #C8AB3C;
     font-weight: 800;
     font-size: 1rem;
 }
@@ -170,7 +192,7 @@ a.sidebar-link:hover {
 #home {
     position: relative; /* Wichtig für die Platzierung von Pseudo-Elementen */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)), 
-                      url('/static/images/bg2.jpg'); /* Verlauf + Bild */
+                      url('/static/images/bg3.jpg'); /* Verlauf + Bild */
     background-size: cover; /* Bildgröße anpassen */
     background-position: center; /* Bildzentrierung */
     background-repeat: no-repeat; /* Verhindert Wiederholung */
@@ -184,12 +206,13 @@ a.sidebar-link:hover {
 
 
 .logo {
-    position: absolute; /* Positionierung relativ zum Bildschirm */
-    top: 5%; /* Abstand von oben */
-    right: 5%; /* Abstand von rechts */
-    width: 160px; /* Breite des Logos */
-    height: 160px; /* Höhe des Logos */
-    z-index: 1050; /* Sicherstellen, dass es über anderen Elementen liegt */
+    position: fixed; /* Fixiert das Logo beim Scrollen */
+    top: 10px; /* Abstand vom oberen Rand */
+    left: 10px; /* Abstand vom linken Rand */
+    width: 120px; /* Breite des Logos */
+    height: 120px; /* Höhe des Logos */
+    z-index: 1050; /* Über allem anderen */
+    transition: left 0.35s ease-in-out; /* Gleiche Bewegung wie der Toggle-Button */
 }
 
 .logo img {
@@ -198,6 +221,22 @@ a.sidebar-link:hover {
     object-fit: cover; /* Bild korrekt skalieren */
     border-radius: 25%;
 }
+
+.center-caption {
+    position: fixed; /* Ermöglicht die feste Platzierung relativ zum Viewport */
+    top: 10px; /* Abstand vom oberen Rand */
+    left: 50%; /* Zentriert horizontal */
+    transform: translateX(-50%); /* Zentriert den Container relativ zur eigenen Breite */
+    font-size: 3rem; /* Schriftgröße */
+    font-weight: bold; /* Fettdruck */
+    color: #C8AB3C; /* Goldene Farbe */
+    background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter Hintergrund */
+    padding: 0.5rem 1rem; /* Innenabstand für besseren Kontrast */
+    border-radius: 15px; /* Abgerundete Ecken */
+    z-index: 1050; /* Überlappt andere Inhalte */
+    text-align: center; /* Text zentrieren */
+}
+
 
 /* Home Caption */
 .home-caption {
