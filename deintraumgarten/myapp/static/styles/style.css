@@ -53,25 +53,18 @@ hr {
 }
 
 #sidebar.collapsed ~ .toggler-btn {
-    left: 40px; /* Wenn die Sidebar eingeklappt ist */
-}
-
-#sidebar ~ .toggler-btn{
-    left: 304px;
-}
-
-#sidebar.collapsed ~ .logo {
     left: 10px; /* Wenn die Sidebar eingeklappt ist */
 }
 
-#sidebar ~ .logo {
-    left: 274px; /* Wenn die Sidebar ausgeklappt ist */
+#sidebar ~ .toggler-btn{
+    left: 274px;
 }
+
 
 .toggler-btn {
     position: fixed; /* Fixiert den Button beim Scrollen */
-    left: 20px; /* Anfangs rechts von der geöffneten Sidebar */
-    top: 140px; /* Direkt unter dem Logo */
+    left: 10px; /* Anfangs rechts von der geöffneten Sidebar */
+    top: 20px; /* Direkt unter dem Logo */
     background-color: rgba(20, 20, 20, 0.8); /* Transparenter Hintergrund */
     color: #fff; /* Weiße Schriftfarbe */
     border: none; /* Kein Rahmen */
@@ -204,39 +197,23 @@ a.sidebar-link:hover {
     text-align: center;
 }
 
-
-.logo {
-    position: fixed; /* Fixiert das Logo beim Scrollen */
-    top: 10px; /* Abstand vom oberen Rand */
-    left: 10px; /* Abstand vom linken Rand */
-    width: 120px; /* Breite des Logos */
-    height: 120px; /* Höhe des Logos */
-    z-index: 1050; /* Über allem anderen */
-    transition: left 0.35s ease-in-out; /* Gleiche Bewegung wie der Toggle-Button */
-}
-
-.logo img {
-    width: 100%; /* Bild an Container anpassen */
-    height: 100%; /* Bild an Container anpassen */
-    object-fit: cover; /* Bild korrekt skalieren */
-    border-radius: 25%;
-}
-
 .center-caption {
-    position: fixed; /* Ermöglicht die feste Platzierung relativ zum Viewport */
-    top: 10px; /* Abstand vom oberen Rand */
-    left: 50%; /* Zentriert horizontal */
-    transform: translateX(-50%); /* Zentriert den Container relativ zur eigenen Breite */
-    font-size: 3rem; /* Schriftgröße */
-    font-weight: bold; /* Fettdruck */
-    color: #C8AB3C; /* Goldene Farbe */
-    background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter Hintergrund */
-    padding: 0.5rem 1rem; /* Innenabstand für besseren Kontrast */
-    border-radius: 15px; /* Abgerundete Ecken */
-    z-index: 1050; /* Überlappt andere Inhalte */
-    text-align: center; /* Text zentrieren */
+    position: absolute;
+    top: 10px; /* Ganz oben in der Home-Section */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 10;
+    display: inline-block;
 }
 
+.center-caption img {
+    border-radius: 20px; /* Leichte Abrundung der Ecken */
+    max-width: 500px; /* Begrenzung der Breite */
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* Home Caption */
 .home-caption {
