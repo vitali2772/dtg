@@ -230,13 +230,82 @@ a.sidebar-link:hover {
 
 
 
-/* Styling for the About Section */
+/* Über uns - Abschnitt */
 #about {
-    background-color: #000; /* Hellgrauer Hintergrund */
-    padding: 3rem 1.5rem; /* Außenabstand */
-    text-align: center; /* Zentrierung von Text */
-    color: #fff; /* Weiße Textfarbe */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    background-color: #000;
+    color: #fff;
 }
+
+
+.about-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* Wellenform für den Hintergrund */
+.about-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url('static/images/wave-top.svg') no-repeat center top;
+    background-size: cover;
+    z-index: -1;
+}
+
+.about-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url('static/images/wave-bottom.svg') no-repeat center bottom;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Linke Seite (Textbox) */
+.about-box {
+    flex: 1;
+    background: rgba(33, 33, 33, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Rechte Seite (Bild) */
+.about-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
 
 #about h2 {
     font-size: 2.5rem; /* Schriftgröße anpassen */
@@ -252,10 +321,10 @@ a.sidebar-link:hover {
 }
 
 .section-title {
-    font-size: 2.5rem; /* Große Schrift für den Titel */
-    font-weight: bold;
-    margin-bottom: 1.5rem; /* Abstand nach unten */
-    color: #333;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #C8AB3C;
+    margin-bottom: 2rem;
 }
 
 /* Karten-Layout */
@@ -289,13 +358,17 @@ a.sidebar-link:hover {
     margin-bottom: 0.5rem; /* Kleineren Abstand nach unten */
     border-radius: 50%; /* Rundes Bild */
     overflow: hidden; /* Alles außerhalb des Kreises abschneiden */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Bild innerhalb des Kreises */
 .card-img img {
-    width: 100%; /* Bild auf volle Breite des Containers */
-    height: 100%; /* Bild auf volle Höhe des Containers */
+    width: 190%; /* Bild auf volle Breite des Containers */
+    height: 190%; /* Bild auf volle Höhe des Containers */
     object-fit: cover; /* Bild so skalieren, dass es den Kreis ausfüllt */
+    object-position: center; /* Zentriert das Bild im Kreis */
 }
 
 /* Karteninhalt */
@@ -435,9 +508,6 @@ html, body {
     filter: brightness(1); /* Setzt die Helligkeit zurück */
 }
 
-.section-title {
-    color: white;
-}
 /* Einzelne Karte */
 .card-s {
     background-color: #000; /* Schwarzer Hintergrund */
