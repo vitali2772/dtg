@@ -67,7 +67,7 @@
                         </a>
                         <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Impressum</a>
+                                <a href="{% url 'impressum' %}" target="_blank" class="sidebar-link">Impressum</a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">Datenschutz</a>
@@ -202,90 +202,157 @@
                 </section>
 
 
-                <!-- Service Section -->
                 <section id="service">
                     <div class="container">
-                        <h2 class="section-title">Dienstleistungen</h2>
-                        <div class="service-cards">
-                            <!-- Karte 1 -->
-                            <div class="card-s">
-                                <div class="card-s-img">
+                        <h2 class="section-title">Unsere Dienstleistungen</h2>
+                        
+                        <div class="service-grid">
+                            <!-- Dienstleistung 1 -->
+                            <div class="service-item" onclick="openModal('modal1')">
+                                <div class="service-img">
                                     <img src="static/images/card1.jpg" alt="Planungsdienstleistungen">
                                 </div>
-                                <div class="card-s-content">
-                                    <span>Planungsdienstleistungen</span>
-                                </div>
+                                <h3>Planungsdienstleistungen</h3>
                             </div>
-                            <!-- Karte 2 -->
-                            <div class="card-s">
-                                <div class="card-s-img">
-                                    <img src="static/images/card2.jpg" alt="Erdbewegungen" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 80%;">
+                
+                            <!-- Dienstleistung 2 -->
+                            <div class="service-item" onclick="openModal('modal2')">
+                                <div class="service-img">
+                                    <img src="static/images/card2.jpg" alt="Erdbewegungen">
                                 </div>
-                                <div class="card-s-content">
-                                    <span>Erdbewegungen</span>
-                                </div>
-                            </div>                            
-                            <!-- Karte 3 -->
-                            <div class="card-s">
-                                <div class="card-s-img">
+                                <h3>Erdbewegungen</h3>
+                            </div>
+                
+                            <!-- Dienstleistung 3 -->
+                            <div class="service-item" onclick="openModal('modal3')">
+                                <div class="service-img">
                                     <img src="static/images/card3.jpg" alt="Pflasterarbeiten">
                                 </div>
-                                <div class="card-s-content">
-                                    <span>Pflasterarbeiten</span>
-                                </div>
+                                <h3>Pflasterarbeiten</h3>
                             </div>
-                            <!-- Weitere Karten (4–9) -->
-                            <div class="card-s">
-                                <div class="card-s-img">
+                
+                            <!-- Dienstleistung 4 -->
+                            <div class="service-item" onclick="openModal('modal4')">
+                                <div class="service-img">
                                     <img src="static/images/card4.jpg" alt="Abbrucharbeiten">
                                 </div>
-                                <div class="card-s-content">
-                                    <span>Abbrucharbeiten</span>
-                                </div>
+                                <h3>Abbrucharbeiten</h3>
                             </div>
-                            <div class="card-s">
-                                <div class="card-s-img">
-                                    <img src="static/images/card5.jpg" alt="Zaunbau" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 10%;">
+                
+                            <!-- Dienstleistung 5 -->
+                            <div class="service-item" onclick="openModal('modal5')">
+                                <div class="service-img">
+                                    <img src="static/images/card5.jpg" alt="Zaunbau" style="width: 160%; height: 160%;">
                                 </div>
-                                <div class="card-s-content">
-                                    <span>Zaunbau</span>
-                                </div>
+                                <h3>Zaunbau</h3>
                             </div>
-                            <div class="card-s">
-                                <div class="card-s-img">
-                                    <img src="static/images/card6.jpg" alt="Betonbohren und -sägen" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 60%;">
+                
+                            <!-- Dienstleistung 6 -->
+                            <div class="service-item" onclick="openModal('modal6')">
+                                <div class="service-img">
+                                    <img src="static/images/card6.jpg" alt="Betonbohren und -sägen">
                                 </div>
-                                <div class="card-s-content">
-                                    <span>Betonbohren und -sägen</span>
-                                </div>
+                                <h3>Betonbohren und -sägen</h3>
                             </div>
-                            <div class="card-s">
-                                <div class="card-s-img">
-                                    <img src="static/images/card7.jpg" alt="Grünpflege" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 70%;">
+                
+                            <!-- Dienstleistung 7 -->
+                            <div class="service-item" onclick="openModal('modal7')">
+                                <div class="service-img">
+                                    <img src="static/images/card7.jpg" alt="Grünpflege">
                                 </div>
-                                <div class="card-s-content">
-                                    <span>Grünpflege</span>
-                                </div>
+                                <h3>Grünpflege</h3>
                             </div>
-                            <div class="card-s">
-                                <div class="card-s-img">
+                
+                            <!-- Dienstleistung 8 -->
+                            <div class="service-item" onclick="openModal('modal8')">
+                                <div class="service-img">
                                     <img src="static/images/card8.jpg" alt="Winterdienst">
                                 </div>
-                                <div class="card-s-content">
-                                    <span>Winterdienst</span>
-                                </div>
+                                <h3>Winterdienst</h3>
                             </div>
-                            <div class="card-s">
-                                <div class="card-s-img">
+                
+                            <!-- Dienstleistung 9 -->
+                            <div class="service-item" onclick="openModal('modal9')">
+                                <div class="service-img">
                                     <img src="static/images/card9.jpg" alt="Reinigungsarbeiten">
                                 </div>
-                                <div class="card-s-content">
-                                    <span>Reinigungsarbeiten</span>
-                                </div>
+                                <h3>Reinigungsarbeiten</h3>
                             </div>
                         </div>
                     </div>
-                </section> 
+                </section>
+                
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <h2>Planungsdienstleistungen</h2>
+                        <p>Wir unterstützen Sie bei der Planung Ihrer Projekte, damit alle Abläufe optimal koordiniert werden.</p>
+                    </div>
+                </div>
+                
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <h2>Erdbewegungen</h2>
+                        <p>Wir übernehmen Aushub- und Erdarbeiten für den Bau oder die Landschaftsgestaltung.</p>
+                    </div>
+                </div>
+                
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <h2>Pflasterarbeiten</h2>
+                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                    </div>
+                </div>
+
+                <div id="modal4" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal4')">&times;</span>
+                        <h2>Abbrucharbeiten</h2>
+                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                    </div>
+                </div>
+
+                <div id="modal5" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal5')">&times;</span>
+                        <h2>Zaunbau</h2>
+                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                    </div>
+                </div>
+
+                <div id="modal6" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal6')">&times;</span>
+                        <h2>Betonbohren und -sägen</h2>
+                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                    </div>
+                </div>
+
+                <div id="modal7" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal7')">&times;</span>
+                        <h2>Grünpflege</h2>
+                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                    </div>
+                </div>
+
+                <div id="modal8" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal8')">&times;</span>
+                        <h2>Winterdienst</h2>
+                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                    </div>
+                </div>
+
+                <div id="modal9" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal9')">&times;</span>
+                        <h2>Reinigungsarbeiten</h2>
+                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                    </div>
+                </div>
                 
                 <!-- Partner Section -->
                 <section id="partners" class="partner-section">
@@ -294,7 +361,7 @@
                         <div class="container">
                             <div class="partner-logos">
                                 <a href="https://www.eds-service.de" target="_blank"><img src="{% static 'images/partner1.png' %}" alt="www.eds-service.de"></a>
-                                <a href="https://kfz-meisterbetrieb-eriskirch.de" target="_blank"><img src="{% static 'images/partner2.png' %}" alt="https://kfz-meisterbetrieb-eriskirch.de"></a>
+                                <a href="https://kfz-meisterbetrieb-eriskirch.de" target="_blank"><img src="{% static 'images/partner2.png' %}" alt="https://kfz-meisterbetrieb-eriskirch.de" style="object-fit: cover; object-position: 50% 40%;"></a>
                                 <a href="https://ah-lohnunternehmen.de" target="_blank"><img src="{% static 'images/partner3.png' %}" alt="https://ah-lohnunternehmen.de"></a>
                             </div>
                         </div>
@@ -393,11 +460,24 @@
                     setTimeout(() => alert.remove(), 500); // Entfernt das Element nach der Animation
                 }
             }, 4000); // Meldung bleibt 5 Sekunden sichtbar
+
+            document.querySelector("form").addEventListener("submit", function() {
+                setTimeout(() => this.reset(), 1000);
+            });
+
+            function openModal(id) {
+                document.getElementById(id).classList.add("show");
+            }
+
+            function closeModal(id) {
+                document.getElementById(id).classList.remove("show");
+            }
+
         </script>
 
         <footer class="footer">
             <div class="footer-links">
-                <a href="#" class="footer-link">Impressum</a>
+                <a href="{% url 'impressum' %}" class="footer-link">Impressum</a>
                 <a href="#" class="footer-link">Datenschutz</a>
                 <a href="#" class="footer-link">Cookie-Einstellungen</a>
             </div>

@@ -11,6 +11,10 @@ h1 {
     font-weight: 800;
 }
 
+h2 {
+    font-weight: bold;
+}
+
 li {
     list-style: none;
 }
@@ -185,7 +189,7 @@ a.sidebar-link:hover {
 #home {
     position: relative; /* Wichtig für die Platzierung von Pseudo-Elementen */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)), 
-                      url('/static/images/bg3.jpg'); /* Verlauf + Bild */
+                      url('/static/images/bg5.jpg'); /* Verlauf + Bild */
     background-size: cover; /* Bildgröße anpassen */
     background-position: center; /* Bildzentrierung */
     background-repeat: no-repeat; /* Verhindert Wiederholung */
@@ -361,6 +365,12 @@ a.sidebar-link:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover-Effekt */
+.card-img:hover {
+    transform: scale(1.2);
 }
 
 /* Bild innerhalb des Kreises */
@@ -457,16 +467,113 @@ html, body {
     color: #C8AB3C; /* Textfarbe */
 }
 
-/* Service Cards Container */
-.service-cards {
-    display: grid; /* Aktiviere Grid-Layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 Spalten mit gleicher Breite */
-    gap: 1.5rem; /* Abstand zwischen den Karten */
-    margin: 0 auto; /* Zentrierung des Containers */
-    padding: 0 2rem; /* Zusätzlicher Abstand links und rechts vom Bildschirmrand */
+/* Dienstleistungs-Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-/* Partner Section */
+/* Dienstleistungs-Box */
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Runde Bilder */
+.service-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 8px solid rgb(50, 50, 50); /* Grauer Rahmen */
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover-Effekt */
+.service-img:hover {
+    transform: scale(1.1);
+}
+
+/* Überschrift */
+.service-item h3 {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #C8AB3C;
+}
+
+/* === Popup (Modal) Styling === */
+.modal {
+    display: none; /* Stellt sicher, dass die Modals erst nach Klick erscheinen */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex; /* Wird nur per JS hinzugefügt */
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Unsichtbar, bis per JS geöffnet */
+    opacity: 0; /* Startet mit 0, um einen sanften Übergang zu ermöglichen */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal-content {
+    background: rgb(31, 31, 31);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.modal-content h2 {
+    color: #C8AB3C;
+}
+
+/* Animation für sanftes Einblenden */
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Schließen-Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #C8AB3C;
+}
+
+
+
+
 /* Partner Section */
 .partner-section {
     position: relative;
