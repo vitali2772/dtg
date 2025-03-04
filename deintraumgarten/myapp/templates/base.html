@@ -24,7 +24,7 @@
             <!-- Titel & Logo der Sidebar -->
             <aside id="sidebar" class="sidebar-toggle collapsed">
                 <div class="sidebar-logo">
-                    <a href="#">deinlandschaftsbauer.de</a>
+                    <img src="static/images/logoweiß.png" alt="deinlandschaftsbauer">
                 </div>
 
                 <!-- Sidebar Navigation -->
@@ -72,32 +72,9 @@
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">Datenschutz</a>
                             </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Cookie-Einstellungen</a>
-                            </li>
                         </ul>
                     </li>
                 </ul>
-                <div class="sidebar-footer">
-                    <a href="#" class="sidebar-link">
-                        <i class="material-symbols-outlined">settings</i>
-                    </a>
-                    <a>
-                        <span>
-                            <img src="static/images/facebook.png" alt="An example icon" style="width:24px;height:24px" />
-                        </span>
-                    </a>
-                    <a>
-                        <span>
-                            <img src="static/images/x.png" alt="An example icon" style="width:24px;height:24px" />
-                        </span>
-                    </a>
-                    <a>
-                        <span>
-                            <img src="static/images/instagram.png" alt="An example icon" style="width:24px;height:24px" />
-                        </span>
-                    </a>
-                </div>
             </aside>
 
             <!-- Toggle Button -->
@@ -105,7 +82,7 @@
                 <i class="material-symbols-outlined">menu</i>
             </button>
             <div class="center-caption">
-                <img src="static/images/Logo_lang_Gold.png" alt="Logo deinlandschaftsbauer">
+                <img src="static/images/Logo_lang_WeißGold.png" alt="Logo deinlandschaftsbauer">
             </div>            
 
             <div class="main-content flex-grow-1">
@@ -310,7 +287,7 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal4')">&times;</span>
                         <h2>Abbrucharbeiten</h2>
-                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                        <p>Wir übernehmen den professionellen Rückbau von Gebäuden und anderen Bauwerken, inklusive fachgerechter Entsorgung.</p>
                     </div>
                 </div>
 
@@ -318,7 +295,7 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal5')">&times;</span>
                         <h2>Zaunbau</h2>
-                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                        <p>Ob Holz-, Metall- oder Sichtschutzzaun – wir bauen hochwertige und langlebige Zäune für Ihr Grundstück.</p>
                     </div>
                 </div>
 
@@ -326,7 +303,7 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal6')">&times;</span>
                         <h2>Betonbohren und -sägen</h2>
-                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                        <p>Wir führen präzise Kernbohrungen und Betonsägearbeiten für verschiedene Bauprojekte durch.</p>
                     </div>
                 </div>
 
@@ -334,7 +311,7 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal7')">&times;</span>
                         <h2>Grünpflege</h2>
-                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                        <p>Regelmäßige Pflege von Grünflächen, Gärten und Hecken für ein gepflegtes Erscheinungsbild.</p>
                     </div>
                 </div>
 
@@ -342,7 +319,7 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal8')">&times;</span>
                         <h2>Winterdienst</h2>
-                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                        <p>Wir sorgen für sichere Wege und Flächen durch professionellen Räum- und Streudienst im Winter.</p>
                     </div>
                 </div>
 
@@ -350,7 +327,7 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal9')">&times;</span>
                         <h2>Reinigungsarbeiten</h2>
-                        <p>Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterarbeiten.</p>
+                        <p>Gründliche Reinigung von Außenanlagen, Wegen und Einfahrten für einen gepflegten Gesamteindruck.</p>
                     </div>
                 </div>
                 
@@ -478,19 +455,7 @@
         <footer class="footer">
             <div class="footer-links">
                 <a href="{% url 'impressum' %}" class="footer-link">Impressum</a>
-                <a href="#" class="footer-link">Datenschutz</a>
-                <a href="#" class="footer-link">Cookie-Einstellungen</a>
-            </div>
-            <div class="footer-socials">
-                <a href="https://facebook.com" target="_blank" class="social-link">
-                    <img src="{% static 'images/facebook.png' %}" alt="Facebook" class="social-icon">
-                </a>
-                <a href="https://twitter.com" target="_blank" class="social-link">
-                    <img src="{% static 'images/x.png' %}" alt="X (Twitter)" class="social-icon">
-                </a>
-                <a href="https://instagram.com" target="_blank" class="social-link">
-                    <img src="{% static 'images/instagram.png' %}" alt="Instagram" class="social-icon">
-                </a>
+                <a href="{% url 'datenschutz' %}" class="footer-link">Datenschutz</a>
             </div>
         </footer>
         

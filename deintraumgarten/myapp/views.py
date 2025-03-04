@@ -44,3 +44,6 @@ def todos(request):
 
 def impressum(request):
     return render(request, 'impressum.html')
+
+def datenschutz(request):
+    return render(request, 'datenschutz.html')

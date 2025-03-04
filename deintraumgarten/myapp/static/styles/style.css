@@ -112,6 +112,16 @@ hr {
     font-size: 1rem;
 }
 
+.sidebar-logo img {
+    width: 150px;  /* Setzt die Breite des Logos */
+    height: 150px; /* Setzt die Höhe des Logos */
+    border-radius: 50%; /* Macht das Bild rund */
+    object-fit: cover; /* Sorgt dafür, dass das Bild sich nicht verzieht */
+    object-position: 60% 10%;
+    display: block; /* Stellt sicher, dass es keinen zusätzlichen Abstand hat */
+    margin: 10px auto; /* Zentriert das Logo */
+}
+
 a.sidebar-link {
     padding: .625rem 1.625rem;
     color: #FFF;
